@@ -1,0 +1,127 @@
+{"properties": [
+  {
+    "name": "client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'client-id'"
+  },
+  {
+    "name": "authorization-grant-type",
+    "type": "java.lang.String",
+    "description": "A description for 'authorization-grant-type'"
+  },
+  {
+    "name": "client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'client-secret'"
+  },
+  {
+    "name": "token-uri",
+    "type": "java.lang.String",
+    "description": "A description for 'token-uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.referenceValueList.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.referenceValueList.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.referenceValueList.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.referenceValueList.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.referenceType.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.referenceType.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.entry.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.entry.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.uri'"
+  },
+  {
+    "name": "export.edpbDemoArticle56.schema.referenceType.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'export.edpbDemoArticle56.schema.referenceType.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.uri'"
+  }
+]}
