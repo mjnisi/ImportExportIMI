@@ -1,8 +1,11 @@
 package eu.europa.edpb.service;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.swing.text.Document;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -69,11 +72,11 @@ public class Article56ServiceImpl implements Article56Service {
 		                entity, 
 		                String.class);
 		        System.out.println("Result - status ("+ response.getStatusCode() + ") has body: " + response.hasBody());
-		        System.out.println("Result - status ("+ response.getStatusCode() + ") has body: " + response.getBody());
+//		        System.out.println("Result - status ("+ response.getStatusCode() + ") has body: " + response.getBody());
 
 		        return response.getBody();
 		    } catch (Exception e) {
-		        System.out.println("** Exception: "+ e.getMessage());
+				System.out.println("** Exception: " + e.getMessage());
 		    }		
 		} catch (Exception e) {
 			e.printStackTrace();

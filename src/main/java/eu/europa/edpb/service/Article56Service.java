@@ -1,5 +1,8 @@
 package eu.europa.edpb.service;
 
+import java.io.File;
+
+import javax.swing.text.Document;
 
 public interface Article56Service {
 	

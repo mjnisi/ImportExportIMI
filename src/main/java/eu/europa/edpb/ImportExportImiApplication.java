@@ -1,5 +1,6 @@
 package eu.europa.edpb;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 @Configuration
 @SpringBootApplication(exclude={SecurityAutoConfiguration.class})
@@ -20,7 +22,7 @@ public class ImportExportImiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ImportExportImiApplication.class, args);
 	}
-
+	
 	@Bean("clientRest")
 	public RestTemplate registerRestTemplate() {
 
