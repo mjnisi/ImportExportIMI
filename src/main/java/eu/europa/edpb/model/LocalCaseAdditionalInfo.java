@@ -1,28 +1,23 @@
 package eu.europa.edpb.model;
 
+import java.util.Map;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 @XStreamAlias("localCaseAdditionalInfo")
 public class LocalCaseAdditionalInfo {
 
-
-//	<isLocalCase id="101912" referenceList="XYesNoValueList"/>
-//	<localCaseAdditionalInfo id="106865" referenceList="GdprLocalCaseValueList"/>
-	
 	@XStreamAsAttribute
-	private long id;
+	private String id;
 	
 	@XStreamAsAttribute
 	private String referenceList;
 	
-	private String description;
-	
-	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getReferenceList() {
@@ -32,9 +27,7 @@ public class LocalCaseAdditionalInfo {
 		this.referenceList = referenceList;
 	}
 	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
+		Map<String, String> map1= ReferenceType.referenceList.get(getReferenceList());
+		return map1.get(getId());
 	}
 }

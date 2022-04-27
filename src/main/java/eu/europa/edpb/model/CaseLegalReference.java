@@ -1,26 +1,23 @@
 package eu.europa.edpb.model;
 
+import java.util.Map;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 @XStreamAlias("caseLegalReference")
 public class CaseLegalReference {
 
-//	<caseLegalReference id="107005" referenceList="GdprLegalReferenceValueList"/>
-//	<caseLegalReference id="107003" referenceList="GdprLegalReferenceValueList"/>
-
-	
 	@XStreamAsAttribute
-	private long id;
+	private String id;
+	
 	@XStreamAsAttribute
 	private String referenceList;
-	private String description;
 	
-	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getReferenceList() {
@@ -30,10 +27,7 @@ public class CaseLegalReference {
 		this.referenceList = referenceList;
 	}
 	public String getDescription() {
-		return description;
+		Map<String, String> map1= ReferenceType.referenceList.get(getReferenceList());
+		return map1.get(getId());
 	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
 }
