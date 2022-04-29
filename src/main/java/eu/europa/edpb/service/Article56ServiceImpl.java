@@ -1,11 +1,8 @@
 package eu.europa.edpb.service;
 
-import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.text.Document;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
