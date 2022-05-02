@@ -32,7 +32,8 @@ public class CaseBackground {
 	@XStreamImplicit
 	private List<CaseKindOfDecision> caseKindOfDecision;
 	private String caseKindOfDecisionOther;
-	private CaseTopic caseTopic;
+	@XStreamImplicit
+	private List<CaseTopic> caseTopic;
 	private String caseTopicOther;
 	@XStreamImplicit
 	private List<CaseLegalReference> caseLegalReference;
@@ -68,6 +69,14 @@ public class CaseBackground {
 		this.caseProcessingDescription = caseProcessingDescription;
 	}
 
+	public List<CaseTopic> getCaseTopic() {
+		return caseTopic;
+	}
+
+	public void setCaseTopic(List<CaseTopic> caseTopic) {
+		this.caseTopic = caseTopic;
+	}
+
 	public CaseOrigin getCaseOrigin() {
 		return caseOrigin;
 	}
@@ -98,14 +107,6 @@ public class CaseBackground {
 
 	public void setCaseKindOfDecisionOther(String caseKindOfDecisionOther) {
 		this.caseKindOfDecisionOther = caseKindOfDecisionOther;
-	}
-
-	public CaseTopic getCaseTopic() {
-		return caseTopic;
-	}
-
-	public void setCaseTopic(CaseTopic caseTopic) {
-		this.caseTopic = caseTopic;
 	}
 
 	public String getCaseTopicOther() {

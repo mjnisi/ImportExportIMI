@@ -14,4 +14,5 @@ public interface Article56Service {
 
 	public String findReferenceValueListArticle56();
 
+	public String createArticle56();
 }

@@ -35,21 +35,22 @@ public class Article56ServiceImpl implements Article56Service {
 	private String getSchemaArticle56Uri;
 
 	@Value("${export.edpbDemoArticle56.referenceValueList.uri}")
-	private String getReferenceValueListArticle56;
+	private String getReferenceValueListArticle56Uri;
 
 	@Value("${export.edpbDemoArticle56.schema.referenceValueList.uri}")
-	private String getSchemaReferenceValueListArticle56;
+	private String getSchemaReferenceValueListArticle56Uri;
 
 	@Value("${export.edpbDemoArticle56.schema.referenceType.uri}")
-	private String getSchemaReferenceTypeArticle56;
+	private String getSchemaReferenceTypeArticle56Uri;
+	
+	@Value("${import.edpbDemoArticle56.uri}")
+	private String createArticle56Uri;
 
 	@Override
 	public String findAllArticle56() {
 
 		try {
 			String token = authService.getToken();
-
-//			List<EdpbDemoArticle56> edpbDemoArticle56List = Arrays.asList(clientRest.getForObject(url, EdpbDemoArticle56[].class));
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Authorization", "Bearer " + token);
@@ -65,7 +66,6 @@ public class Article56ServiceImpl implements Article56Service {
 				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
 				System.out
 						.println("Result - status (" + response.getStatusCode() + ") has body: " + response.hasBody());
-//		        System.out.println("Result - status ("+ response.getStatusCode() + ") has body: " + response.getBody());
 
 				return response.getBody();
 			} catch (Exception e) {
@@ -164,7 +164,7 @@ public class Article56ServiceImpl implements Article56Service {
 
 			ResponseEntity<String> response = null;
 
-			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getReferenceValueListArticle56);
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getReferenceValueListArticle56Uri);
 			try {
 				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
 				System.out
@@ -199,7 +199,7 @@ public class Article56ServiceImpl implements Article56Service {
 
 			ResponseEntity<String> response = null;
 
-			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getSchemaReferenceValueListArticle56);
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getSchemaReferenceValueListArticle56Uri);
 			try {
 				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
 				System.out
@@ -234,7 +234,7 @@ public class Article56ServiceImpl implements Article56Service {
 
 			ResponseEntity<String> response = null;
 
-			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getSchemaReferenceTypeArticle56);
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getSchemaReferenceTypeArticle56Uri);
 			try {
 				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
 				System.out
@@ -252,6 +252,37 @@ public class Article56ServiceImpl implements Article56Service {
 		}
 		return null;
 
+	}
+
+	@Override
+	public String createArticle56() {
+		try {
+			String token = authService.getToken();
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Authorization", "Bearer " + token);
+			headers.setContentType(MediaType.APPLICATION_XML);
+			headers.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
+
+			HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(headers);
+
+			ResponseEntity<String> response = null;
+
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(createArticle56Uri);
+			try {
+				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
+				System.out
+						.println("Result - status (" + response.getStatusCode() + ") has body: " + response.getBody());
+
+				return response.getBody();
+			} catch (Exception e) {
+				System.out.println("** Exception: " + e.getMessage());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 
 }

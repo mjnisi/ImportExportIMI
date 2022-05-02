@@ -29,8 +29,6 @@ public class WebController {
 	@Autowired
 	private Article56Service article56;
 
-//	public Map<String, Map<String, String>> referenceList;
-
 	@GetMapping(value = "/view")
 	public String viewAll(Model model) {
 
@@ -69,10 +67,6 @@ public class WebController {
 
 		model.addAttribute("article56List", art56List);
 
-//		EdpbDemoArticle56 art56 = art56List.getEdpbDemoArticle56List().get(0);
-//		Map<String, String> map1= referenceList.get(art56.getCaseType().getIsLocalCase().getReferenceList());
-//		String value = map1.get(art56.getCaseType().getIsLocalCase().getId());
-
 		return "all-article56";
 	}
 
@@ -96,7 +90,7 @@ public class WebController {
 		System.out.println("xmlString = " + xmlReferenceString);
 
 		ReferenceValueList refList = (ReferenceValueList) xStream2.fromXML(xmlReferenceString);
-		System.out.println("Deserialized object = " + refList);
+//		System.out.println("Deserialized object = " + refList);
 
 		Map<String, Map<String, String>> referenceList = new HashMap<>();
 
