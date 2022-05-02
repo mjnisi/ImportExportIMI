@@ -58,7 +58,9 @@
 
     <td class="tg-0lax">
     <#if art56.caseType.localCaseAdditionalInfo??>
-		${art56.caseType.localCaseAdditionalInfo.description!}
+	    <#list art56.caseType.localCaseAdditionalInfo as ckd>
+			${ckd.description!},
+		</#list>
     </#if>
     </td>
     <td class="tg-0lax">${art56.caseBackground.caseFileTitle!}</td>
@@ -66,7 +68,9 @@
     <td class="tg-0lax">${art56.caseBackground.caseProcessingDescription!}</td>
     <td class="tg-0lax">
     <#if art56.caseBackground.caseOrigin??>
-		${art56.caseBackground.caseOrigin.description!}
+	    <#list art56.caseBackground.caseOrigin as ckd>
+			${ckd.description!},
+		</#list>
     </#if>
 	</td>
     <td class="tg-0lax">

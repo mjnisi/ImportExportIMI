@@ -123,5 +123,10 @@
     "name": "import.edpbDemoArticle56.uri",
     "type": "java.lang.String",
     "description": "A description for 'import.edpbDemoArticle56.uri'"
+  },
+  {
+    "name": "import.edpbDemoArticle56.attach.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'import.edpbDemoArticle56.attach.uri'"
   }
 ]}

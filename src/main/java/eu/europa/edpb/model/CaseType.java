@@ -1,6 +1,9 @@
 package eu.europa.edpb.model;
 
+import java.util.List;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 @XStreamAlias("caseType")
 public class CaseType {
@@ -10,7 +13,8 @@ public class CaseType {
 
 	
 	private IsLocalCase isLocalCase;
-	private LocalCaseAdditionalInfo localCaseAdditionalInfo;
+	@XStreamImplicit
+	private List<LocalCaseAdditionalInfo> localCaseAdditionalInfo;
 
 	
 	public CaseType() {
@@ -27,13 +31,14 @@ public class CaseType {
 	}
 
 
-	public LocalCaseAdditionalInfo getLocalCaseAdditionalInfo() {
+	public List<LocalCaseAdditionalInfo> getLocalCaseAdditionalInfo() {
 		return localCaseAdditionalInfo;
 	}
 
 
-	public void setLocalCaseAdditionalInfo(LocalCaseAdditionalInfo localCaseAdditionalInfo) {
+	public void setLocalCaseAdditionalInfo(List<LocalCaseAdditionalInfo> localCaseAdditionalInfo) {
 		this.localCaseAdditionalInfo = localCaseAdditionalInfo;
 	}
+
 
 }

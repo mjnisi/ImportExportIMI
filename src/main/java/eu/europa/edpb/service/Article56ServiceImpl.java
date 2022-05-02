@@ -46,6 +46,10 @@ public class Article56ServiceImpl implements Article56Service {
 	@Value("${import.edpbDemoArticle56.uri}")
 	private String createArticle56Uri;
 
+	@Value("${export.edpbDemoArticle56.schematronDocumentation.uri}")
+	private String getSchematron;
+
+	
 	@Override
 	public String findAllArticle56() {
 
@@ -99,7 +103,7 @@ public class Article56ServiceImpl implements Article56Service {
 			try {
 				response = clientRest.exchange(getArticle56ByIdUri, HttpMethod.GET, entity, String.class,
 						pathVariables);
-				System.out.println("Result - status (" + response.getStatusCode() + ") body: " + response.getBody());
+				System.out.println("Result - status (" + response.getStatusCode() + ") body: " + response.hasBody());
 
 				return response.getBody().toString();
 			} catch (Exception e) {
@@ -283,6 +287,41 @@ public class Article56ServiceImpl implements Article56Service {
 		}
 
 		return null;
+	}
+
+	@Override
+	public String findSchematronDocumentationArticle56() {
+
+		try {
+			String token = authService.getToken();
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Authorization", "Bearer " + token);
+			headers.setContentType(MediaType.APPLICATION_XML);
+			headers.setAccept(Arrays.asList(MediaType.APPLICATION_XML));
+
+			HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(headers);
+
+			ResponseEntity<String> response = null;
+
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getSchematron);
+			try {
+				response = clientRest.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
+				System.out
+						.println("Result - status (" + response.getStatusCode() + ") has body: " + response.hasBody());
+				System.out
+						.println("Result - status (" + response.getStatusCode() + ") has body: " + response.getBody());
+
+				return response.getBody();
+
+			} catch (Exception e) {
+				System.out.println("** Exception: " + e.getMessage());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+
 	}
 
 }

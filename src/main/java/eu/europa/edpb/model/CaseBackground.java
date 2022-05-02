@@ -28,7 +28,8 @@ public class CaseBackground {
 	private String caseFileTitle;
 	private String caseNationalReferenceNumber;
 	private String caseProcessingDescription;
-	private CaseOrigin caseOrigin;
+	@XStreamImplicit
+	private List<CaseOrigin> caseOrigin;
 	@XStreamImplicit
 	private List<CaseKindOfDecision> caseKindOfDecision;
 	private String caseKindOfDecisionOther;
@@ -77,20 +78,20 @@ public class CaseBackground {
 		this.caseTopic = caseTopic;
 	}
 
-	public CaseOrigin getCaseOrigin() {
-		return caseOrigin;
-	}
-
-	public void setCaseOrigin(CaseOrigin caseOrigin) {
-		this.caseOrigin = caseOrigin;
-	}
-
 	public List<CaseKindOfDecision> getCaseKindOfDecision() {
 		return caseKindOfDecision;
 	}
 
 	public void setCaseKindOfDecision(List<CaseKindOfDecision> caseKindOfDecision) {
 		this.caseKindOfDecision = caseKindOfDecision;
+	}
+
+	public List<CaseOrigin> getCaseOrigin() {
+		return caseOrigin;
+	}
+
+	public void setCaseOrigin(List<CaseOrigin> caseOrigin) {
+		this.caseOrigin = caseOrigin;
 	}
 
 	public List<CaseLegalReference> getCaseLegalReference() {

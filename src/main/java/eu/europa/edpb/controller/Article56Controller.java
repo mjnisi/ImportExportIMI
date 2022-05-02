@@ -42,6 +42,14 @@ public class Article56Controller {
 		return article56.findSchemaArticle56();
 	}
 	
+
+	@GetMapping(value = "/getschematron", produces = MediaType.APPLICATION_XML_VALUE)
+	public String getSchematron() {
+		return article56.findSchematronDocumentationArticle56();
+	}
+	
+	
+	
 	@GetMapping(value = "/getreferencevaluelist", produces = MediaType.APPLICATION_XML_VALUE)
 	public String getReferenceValueList() {
 		return article56.findReferenceValueListArticle56();

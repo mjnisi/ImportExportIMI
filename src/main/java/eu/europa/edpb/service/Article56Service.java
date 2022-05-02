@@ -8,6 +8,8 @@ public interface Article56Service {
 	
 	public String findSchemaArticle56();
 
+	public String findSchematronDocumentationArticle56();
+
 	public String findSchemaReferenceTypeArticle56();
 
 	public String findSchemaReferenceValueListArticle56();
