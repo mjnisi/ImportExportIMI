@@ -70,6 +70,7 @@ public class WebController {
 		return "all-article56";
 	}
 
+	
 	public Map<String, Map<String, String>> createRefList() {
 
 		XStream xStream2 = new XStream();
